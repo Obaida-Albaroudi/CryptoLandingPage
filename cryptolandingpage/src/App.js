@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+
+import NavBar from './Components/NavBar'
+import AppRouter from './Router/AppRouter'
+import Footer from './Components/footer/Footer'
+
+import 'semantic-ui-css/semantic.min.css'
+import { GlobalStyles, PageContainer, ContentWrap } from './StyledComps'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <PageContainer>
+      <GlobalStyles />
+      
+      <NavBar />
+
+      <ContentWrap>
+        <AppRouter />
+      </ContentWrap>
+      
+      <Footer />
+    </PageContainer>
+  )
 }
 
-export default App;
+export default App
